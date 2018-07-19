@@ -288,6 +288,13 @@ p{
 
 .menublock {
     display: block;
+    width: 100%;
+    height:100%;
+    clear: both;
+    oveeflow-x: hidden;
+    position: fixed;
+    left: 0;
+    top: 0;
 }
 
 #fullcheck {
