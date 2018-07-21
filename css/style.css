@@ -27,6 +27,11 @@ p{
     font-size: 18px;
 }
 
+.checkbox {
+    position: absolute;
+    display: none;
+}
+
 .gridcontainer {
     display: block;
     width: 100vw;
@@ -295,7 +300,7 @@ p{
     position: fixed;
     left: 0;
     top: 0; */
-	
+
 	display: block;
     width: 2.5rem;
     height: 2.5rem;
@@ -421,6 +426,137 @@ p{
 
 .fullitem a:hover {
     color: #000;
+}
+
+/* ENDED */
+
+/* Bottom Menu */
+
+.bottomblock {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 12.5vw;
+    overflow: visible;
+    background-color: #1b1464;
+    z-index: 1;
+}
+
+.bottomblock .bottomtxt {
+    display: block;
+    width: 25vw;
+    height: 25vw;
+    background-color: #fff;
+    border: 2px solid #1b1464;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.bottomblock .bottomtxt span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 12vw;
+    height: 2px;
+    background-color: #000;
+    transition: .3s;
+}
+
+.bottomblock .bottomtxt span:before {
+    content: " ";
+    position: absolute;
+    top: -0.45rem;
+    width: inherit;
+    height: inherit;
+    background-color: inherit;
+    transition: .3s;
+}
+
+.bottomblock .bottomtxt span:after {
+    content: " ";
+    position: absolute;
+    top: 0.45rem;
+    width: inherit;
+    height: inherit;
+    background-color: inherit;
+    transition: .3s;
+}
+
+.bottomblock .bottomnav {
+    display: none;
+    visibility: hidden;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    left: 5%;
+    bottom: 35vw;
+    border: 2px solid #1b1464;
+    width: 90%;
+    text-align: center;
+    background-color: #fff;
+}
+
+.bottomblock #bottomcheck:checked + .bottomtxt span {
+    background-color: transparent;
+}
+
+.bottomblock #bottomcheck:checked + .bottomtxt span:before {
+    background-color: #1b1464;
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.bottomblock #bottomcheck:checked + .bottomtxt span:after {
+    background-color: #1b1464;
+    top: 0;
+    transform: rotate(135deg);
+}
+
+.bottomblock #bottomcheck:checked ~ .bottomnav {
+    display: block;
+    visibility: visible;
+}
+
+.bottomblock .bottomnav:after{
+    content: " ";
+    width: 0;
+    height: 0;
+    border-width: 5vw;
+    border-color: #1b1464 transparent transparent transparent;
+    border-style: solid;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+}
+
+.bottomblock .bottomnav .bottomitem {
+    display: block;
+    width: 100%;
+    clear: both;
+    border-bottom: 2px solid #1b1464;
+    padding: 8% 0;
+}
+
+.bottomblock .bottomnav .bottomitem:last-child {
+    border: none;
+}
+
+.bottomblock .bottomnav .bottomitem a {
+    color: #1b1464;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.9rem;
 }
 
 /* ENDED */
